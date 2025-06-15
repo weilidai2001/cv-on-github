@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --title-color: #0B0A0A;
+    --text-color: #403A3A;
+    --text-color-light: #707070;
+    --container-color: #FAFAFA;
+    --container-color-alt: #F0EFEF;
+    --body-color: #FCFCFC;
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .875rem;
+    --small-font-size: .75rem;
+    --smaller-font-size: .625rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --left-column-width: 200px;
+}
+
+@page {
+    size: A4;
+    margin: 1in;
+}
+
+@media print {
+    /* Ensure proper print margins */
+    @page {
+        margin: 1cm;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: var(--normal-font-size);
+        color: #000;
+        background: none;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Ensure Font Awesome icons are visible in print */
+    .fa:before {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Ensure black icons are visible on white background */
+    .icon {
+        background: #000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: #fff !important;
+    }
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: auto;
+    padding: 0 40px;
+    line-height: 1.6;
+    background: var(--body-color);
+    display: flex;
+    gap: 40px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--title-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+}
+
+.contact-info {
+    list-style: none;
+    font-size: var(--small-font-size);
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 0 0 32px;
+    margin: 0 0 32px;
+}
+
+.contact-info > li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+
+/* Style for contact info icons */
+.contact-info .fa {
+    width: 16px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.section-block {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 10px;
+}
+
+.left-column {
+    width: var(--left-column-width);
+}
+
+.left-column .section-title {
+    margin-bottom: 24px;
+}
+
+.left-column h1 {
+    margin: 0 0 20px;
+}
+
+.right-column {
+    width: calc(100% - var(--left-column-width));
+}
+
+.section-title {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    font-size: var(--h2-font-size);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-line {
+    border-top: 1px solid var(--title-color);
+    flex-grow: 1;
+}
+
+.job {
+    margin-bottom: 30px;
+}
+
+.job-title {
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
+}
+
+.description {
+    font-size: var(--normal-font-size);
+    margin-top: 0;
+}
+
+.job-date {
+    float: right;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--text-color-light);
+}
+
+.clear {
+    clear: both;
+}
+
+ul {
+    margin-top: 6px;
+    padding-left: 1.2em;
+}
+
+ul li {
+    margin-bottom: 4px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0 0 32px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid black;
+}
+
+.skills-list li {
+    margin-bottom: 0;
+}
+
+.lang-list i {
+    color: var(--text-color-light);
+    font-size: 14px;
+}
+
+.edu-entry {
+    margin-bottom: 30px;
+}
+
+.edu-entry span {
+    display: block;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -20px;
+    position: relative;
+}
+
+/* Style for circular badge icons */
+.icon .fa {
+    font-size: 20px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.section-content {
+    padding-left: 40px;
+    border-left: 1px solid black;
+}

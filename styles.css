@@ -60,9 +60,12 @@ body {
     color: var(--text-color);
     max-width: 800px;
     margin: auto;
-    padding: 40px;
+    padding: 20px;
     line-height: 1.6;
     background: var(--body-color);
+}
+
+.main-container {
     display: flex;
     gap: 40px;
 }
@@ -117,6 +120,7 @@ header h1 {
 
 .left-column {
     width: var(--left-column-width);
+    margin-bottom: 20px;
 }
 
 .left-column .section-title {
@@ -129,6 +133,32 @@ header h1 {
 
 .right-column {
     width: calc(100% - var(--left-column-width));
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 20px;
+    }
+    
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+    
+    .left-column {
+        margin-bottom: 0;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .section-title {
+        white-space: normal;
+    }
 }
 
 .section-title {
